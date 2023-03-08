@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Housing Rental Price Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:600' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:600' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+        <h1 style="color:Violet;">Airbnb Price Prediction</h1>
+ 
+      <!-- Main Input For Receiving Query to our ML -->
+     <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="room_type" placeholder="Room_type" required="required" /><br>
+          <input type="text" name="accommodates" placeholder="Accommodates" required="required" /><br>
+          <input type="text" name="bathrooms" placeholder="Bathrooms" required="required" /><br>
+          <input type="text" name="cancellation_policy" placeholder="Cancellation_policy" required="required" /><br>
+          <input type="text" name="cleaning_fee" placeholder="Cleaning_fee" required="required" /><br>
+          <input type="text" name="instant_bookable" placeholder="Instant_bookable" required="required" /><br>
+          <input type="text" name="review_scores_rating" placeholder="Review_scores_rating" required="required" /><br>
+          <input type="text" name="bedrooms" placeholder="Bedrooms" required="required" /><br>
+          <input type="text" name="beds" placeholder="Beds" required="required" /><br>
+
+
+
+	        <button type="submit" class="btn btn-primary btn-block btn-large">Predict the price of housing rental </button></p>
+      </form>
+
+      <br>
+      <br>
+  
+   
+    </div>
+    <h4 style="color:Violet;">
+    {{prediction_text}} </h4>
+    
+</body>
+</html>
